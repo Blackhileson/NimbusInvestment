@@ -1,0 +1,158 @@
+
+@media only screen and (max-width:1199px) {
+.portfolio_login a{
+ padding:7px;
+ font-size:13px;	
+}
+}
+@media only screen and (max-width:1024px) {
+
+}
+@media screen and (max-width: 991px) {
+.portfolio_login {
+    margin-left: 0px;
+}
+.portfolio_login a {
+    padding: 7px;
+    font-size: 12px;
+}
+/*.hexa_img, .hexa_caption{
+ width:auto;
+ display:block;
+ text-align:center;	
+}*/
+.hexagon:hover .hexa_img_2{ 
+ width:auto !important;
+ display:block !important;
+ text-align:center; 
+}
+.hexagon{
+ margin-top:0;	
+}
+.heading::before {
+    left: 45%;
+    right: 45%;
+}
+.heading::after {
+    left: 36%;
+    right: 36%;
+}
+.footer_top .discl.info-col {
+    padding-right: 0;
+    margin-bottom: 35px;
+}
+}
+
+@media only screen and (max-width:823px) { 
+.bottom-head .logo {
+    text-align: center;
+    margin: auto;
+}
+.menu-area, .portfolio_login{
+ text-align:center;
+ display:block;	
+}
+.social-icons ul li {
+    display: inline-block;
+    margin: 0;
+}
+.header-bottom {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    background: #fff;
+    top: 0rem;
+    padding-bottom: 0px;
+    left: 0;
+    box-shadow: none;
+}
+.top-right{
+ margin:10px 0;	
+}
+.portfolio_login{
+ margin-top:10px;	
+}
+.social-icons{
+ margin-top:12px;	
+}
+#banner .owl-carousel .item{
+ height:240px;	
+}
+.corner_img {
+    margin-top: 10px;
+    text-align: center;
+}
+.callback_form{
+ margin-top:25px;	
+}
+.callback::before{
+ width:100%;	
+}
+.ft_left, .ft_right{
+ text-align:center;	
+}
+}
+@media only screen and (max-width:767px) { 
+    .corner_img {
+    display: none;
+}
+.header_top {
+    padding-bottom: 10px;
+}
+.header_top .social-icons ul {
+    padding: 0;
+}
+.social-icons ul li:nth-child(5) {
+    display: block;
+    margin: 5px 0;
+}
+.social-icons ul li:nth-child(6) {
+    display: block;
+    margin: 5px 0;
+}
+.social-icons ul li:nth-child(7) {
+    display: block;
+    margin: 5px 0;
+}
+.social-icons ul li .login-btn {
+    margin: 5px;
+    display: block;
+}
+.services .owl-dots {
+    margin-bottom: -45px !important;
+    left: 2% !important;
+}
+.services .owl-dots span {
+    margin: 5px 3px !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+.one_seven {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+}
+@media only screen and (max-width:575px) { 
+.header_top, .social-icons{
+ text-align:center;	
+}
+#banner .owl-carousel .item {
+    height: 180px;
+}
+}
+@media only screen and (max-width:360px) { 
+}
+@media only screen and (max-width:320px) {
+
+
+}
+
+@media only screen and (min-width:1400px) {
+.header-bottom {
+    width: 58%;
+    left: 21%;
+}
+
+}
+

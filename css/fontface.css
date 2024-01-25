@@ -1,0 +1,118 @@
+/* CSS Document */
+@font-face {
+    font-family:OpenSans-Italic;
+    src: url('../fonts/OpenSans-Italic.eot');
+    src: url('../fonts/OpenSans-Italicd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-Italic.woff') format('woff'),
+		 url('../fonts/OpenSans-Italic.svg#webfont') format('svg'),      
+	     url('../fonts/OpenSans-Italic.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-Semibold;
+    src: url('../fonts/OpenSans-Semibold.eot');
+    src: url('../fonts/OpenSans-Semiboldd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-Semibold.woff') format('woff'),
+		 url('../fonts/OpenSans-Semibold.svg#webfont') format('svg'),      
+	     url('../fonts/OpenSans-Semibold.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-Regular;
+    src: url('../fonts/OpenSans-Regular.eot');
+    src: url('../fonts/OpenSans-Regulard41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular.html') format('woff'),
+		 url('../fonts/OpenSans-Regular-2.html#webfont') format('svg'),      
+	     url('../fonts/OpenSans-Regular.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-LightItalic;
+    src: url('../fonts/OpenSans-LightItalic.html');
+    src: url('../fonts/OpenSans-LightItalicd41d.html?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-LightItalic-2.html') format('woff'),
+		 url('../fonts/OpenSans-LightItalic-3.html#webfont') format('svg'),      
+	     url('../fonts/OpenSans-LightItalic-4.html') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-Light;
+    src: url('../fonts/OpenSans-Light.eot');
+    src: url('../fonts/OpenSans-Lightd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-Light.woff') format('woff'),
+		 url('../fonts/OpenSans-Light.svg#webfont') format('svg'),      
+	     url('../fonts/OpenSans-Light.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-Italic;
+    src: url('../fonts/OpenSans-Italic.eot');
+    src: url('../fonts/OpenSans-Italicd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-Italic.woff') format('woff'),
+		 url('../fonts/OpenSans-Italic.svg#webfont') format('svg'),      
+	     url('../fonts/OpenSans-Italic.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-ExtraBoldItalic;
+    src: url('../fonts/OpenSans-ExtraBoldItalic.html');
+    src: url('../fonts/OpenSans-ExtraBoldItalicd41d.html?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-ExtraBoldItalic-2.html') format('woff'),
+		 url('../fonts/OpenSans-ExtraBoldItalic-3.html#webfont') format('svg'),      
+	     url('../fonts/OpenSans-ExtraBoldItalic-4.html') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-Bold;
+    src: url('../fonts/OpenSans-Bold.eot');
+    src: url('../fonts/OpenSans-Boldd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-Bold.woff') format('woff'),
+		 url('../fonts/OpenSans-Bold.svg#webfont') format('svg'),      
+	     url('../fonts/OpenSans-Bold.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:OpenSans-BoldItalic;
+    src: url('../fonts/OpenSans-BoldItalic.html');
+    src: url('../fonts/OpenSans-BoldItalicd41d.html?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/OpenSans-BoldItalic-2.html') format('woff'),
+		 url('../fonts/OpenSans-BoldItalic-3.html#webfont') format('svg'),      
+	     url('../fonts/OpenSans-BoldItalic-4.html') format('truetype'); 
+}
+@font-face {
+    font-family:Lato-Bold;
+    src: url('../fonts/Lato-Bold.html');
+    src: url('../fonts/Lato-Boldd41d.html?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/Lato-Bold-2.html') format('woff'),
+		 url('../fonts/Lato-Bold-3.html#webfont') format('svg'),      
+	     url('../fonts/Lato-Bold-4.html') format('truetype'); 
+}
+@font-face {
+    font-family:Raleway-Bold;
+    src: url('../fonts/Raleway-Bold.eot');
+    src: url('../fonts/Raleway-Boldd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/Raleway-Bold.woff') format('woff'),
+		 url('../fonts/Raleway-Bold.svg#webfont') format('svg'),      
+	     url('../fonts/Raleway-Bold.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:Raleway-Medium;
+    src: url('../fonts/Raleway-Medium.eot');
+    src: url('../fonts/Raleway-Mediumd41d.eot?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/Raleway-Medium.woff') format('woff'),
+		 url('../fonts/Raleway-Medium.svg#webfont') format('svg'),      
+	     url('../fonts/Raleway-Medium.ttf') format('truetype'); 
+}
+@font-face {
+    font-family:Lato-Regular;
+    src: url('../fonts/Lato-Regular.html');
+    src: url('../fonts/Lato-Regulard41d.html?#iefix')
+             format('embedded-opentype'),
+         url('../fonts/Lato-Regular-2.html') format('woff'),
+		 url('../fonts/Lato-Regular-3.html#webfont') format('svg'),      
+	     url('../fonts/Lato-Regular-4.html') format('truetype'); 
+}

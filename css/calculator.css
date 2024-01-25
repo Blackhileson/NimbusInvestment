@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+#vtab {
+	margin: auto;
+	width: 670px;
+	height: 100%;
+	float:left;
+}
+
+#vtab ul li {
+	font-family:arimo;
+	width: auto;
+	height: auto;
+	font-size:14px;
+	list-style-type: none;
+	display: block;
+	text-align: left;
+	margin: auto;
+	border-bottom:1px solid #5e0b00;
+	border-top:1px solid #fff;
+	position: relative;
+	border-right: none;
+	width:180px; 
+	color:#fff;
+	cursor:pointer;
+	padding:6px 4px;
+	font-family: OpenSans-Regular;
+}
+#vtab a {
+	color:#115b42;cursor:pointer; text-decoration:none;
+}
+#vtab a:hover {
+	color:#115b42;cursor:pointer; text-decoration:underline;
+}
+#vtab ul li.home {
+	background: url('../images/home.html') no-repeat center center;
+}
+#vtab ul li.login {
+	background: url('../images/login.html') no-repeat center center;
+}
+#vtab ul li.support {
+	background: url('../images/support.html') no-repeat center center;
+}
+#vtab ul li.selected {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	border: 1px solid 80887c;
+	border-right: none;
+	z-index: 10;
+	position: relative;
+	width:180px; 
+	height:px;
+	color:#fff;
+	cursor:pointer;
+	padding-top:8px;
+	 background:#000;
+   /* background: -moz-linear-gradient(top, #A00A26 0%, #FD003A 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #A00A26), color-stop(100%, #FD003A));
+    background: -webkit-linear-gradient(top, #A00A26 0%, #FD003A 100%);
+    background: -o-linear-gradient(top, #A00A26 0%, #FD003A 100%);
+    background: -ms-linear-gradient(top, #A00A26 0%, #FD003A 100%);
+    background: linear-gradient(to bottom, #A00A26 0%, #FD003A 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93998e', endColorstr='#787e74', GradientType=0 );*/
+	
+}
+#vtab ul {
+	float: left;
+	width: 186px;
+	text-align: left;
+	display: block;
+	margin: auto 0;
+	padding: 2px;
+	/*position: relative;*/
+	top: 30px;
+background:#77b900;
+/*background: -moz-linear-gradient(top, #d62528 0%, #a9090a 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #d62528), color-stop(100%, #a9090a));
+background: -webkit-linear-gradient(top, #d62528 0%, #a9090a 100%);
+background: -o-linear-gradient(top, #d62528 0%, #a9090a 100%);
+background: -ms-linear-gradient(top, #d62528 0%, #a9090a 100%);
+background: linear-gradient(to bottom, #d62528 0%, #a9090a 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0077e0', endColorstr='#0056a1', GradientType=0 );*/
+}
+
+#vtab div {
+	/*background-color: #fafafa;
+	border: 1px solid #ddd;*/
+	margin-left: 185px;
+	
+	min-height: 500px;
+	padding: 12px;
+	position: relative;
+	z-index: 9;
+	-moz-border-radius: 20px;
+	-webkit-border-radius:20px;
+}
+#vtab div h4 {
+	color: #AC0000;
+	font-family:arimo;
+	font-size: 1.2em;
+	padding-top: 5px;
+	margin-top: 0;
+	font-family:OpenSans-Bold;
+}
+#loginForm label {
+	float: left;
+	width: 100px;
+	text-align: right;
+	clear: left;
+	margin-right: 15px;
+}
+#loginForm fieldset {
+	border: none;
+}
+#loginForm fieldset div {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+#loginForm #login {
+	margin-left: 115px;
+}
