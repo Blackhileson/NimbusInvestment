@@ -24,6 +24,49 @@
   <!--animation css-->
   <link href="css/slick.css" rel="stylesheet">
   <link href="css/slick-theme.css" rel="stylesheet">
+  <style>
+
+
+.counter-box {
+    display: block;
+    background: #f6f6f6;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    text-align-last: center;
+}
+
+.counter-box p {
+    margin: 5px 0 0;
+    padding: 0;
+    color: #909090;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.counter-box i {
+    font-size: 60px;
+    margin: 0 0 15px;
+    color: #d2d2d2
+}
+
+.counter {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #666;
+    line-height: 28px
+}
+
+.counter-box.colored {
+    background: #ffdd55;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+    color: #fff
+}
+  </style>
 </head>
 <body>
   <div class="load-popup">
@@ -172,73 +215,30 @@ Get life changing information about how to achieve financial freedom.</h2>
         <div class="container">
           <div class="heading">Our Features</div>
           <div class="row">
-            <div class="col-md-4">
-              <div class="hexagon">
-                <a href="calculator.html">
-                  <div class="hexa_icon"><i class="fa fa-calculator"></i></div>
-                  <div class="hexa_caption">
-                    <div class="hexa_head">Financial Calculator</div>
-                    <p>A calculative online financial calculator lanced with the advance feature, which helps to calculate the critical financial calculations...</p>
+            <div class="container">
+              <div class="row mt-4">
+                  <div class="four col-md-3">
+                      <div class="counter-box colored"> <i class="fa fa-group"></i> <span class="counter">3000</span>
+                          <p>Members</p>
+                      </div>
                   </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="hexagon">
-                <a href="download.html">
-                  <div class="hexa_icon"><i class="fa fa-download"></i></div>
-                  <div class="hexa_caption">
-                    <div class="hexa_head">Download Forms</div>
-                    <p>Don’t just see it, have it with you, and make it useful in your way, and with this being says, with the download forms...</p>
+                  <div class="four col-md-3">
+                      <div class="counter-box colored"> <i class="fa fa-user"></i> <span class="counter">6000</span>
+                          <p>Students</p>
+                      </div>
                   </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="hexagon">
-                <a href="buymf.html">
-                  <div class="hexa_icon"><i class="fa fa-shopping-cart"></i></div>
-                  <div class="hexa_caption">
-                    <div class="hexa_head">Buy MF Online</div>
-                    <p>Buy your mutual fund software here and now, with this, user doesn’t have to wander around for their mutual fund...</p>
+                  <div class="four col-md-3">
+                      <div class="counter-box colored"> <i class="fa fa-building"></i> <span class="counter">56</span>
+                          <p>Years of Establishment</p>
+                      </div>
                   </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="hexagon">
-                <a href="paypremium.html">
-                  <div class="hexa_icon"><i class="fa fa-credit-card-alt"></i></div>
-                  <div class="hexa_caption">
-                    <div class="hexa_head">Pay Premium Online</div>
-                    <p>build your investment with paying the little amount of money on the particular times as a premium, and make a secure investment...</p>
+                  <div class="four col-md-3">
+                      <div class="counter-box colored"> <i class="fa fa-trophy"></i> <span class="counter">64</span>
+                          <p>Awards</p>
+                      </div>
                   </div>
-                </a>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="hexagon">
-                <a href="risk/index.html" target="_blank">
-                  <div class="hexa_icon"><i class="fa fa-exclamation-triangle"></i></div>
-                  <div class="hexa_caption">
-                    <div class="hexa_head">Know Your Risk Profile</div>
-                    <p>It’s time to become advance and pay some attention toward s your risk profile, because risk is the unavoidable and significant...</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="hexagon">
-                <a href="health/index.html" target="_blank">
-                  <div class="hexa_icon"><i class="fa fa-heart"></i></div>
-                  <div class="hexa_caption">
-                    <div class="hexa_head">Check Your Financial Fitness</div>
-                    <p>How is your financial condition?,healthy or not? Here's the way to check your financial fitness lets know how your financial condition...</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-
+          </div>
           </div>
         </div>
         </section><!--investor-->
@@ -1195,6 +1195,23 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
             <script src="js/menu.js"></script>
             <script src="js/main.js"></script>
             <!--slider-js-->
+            <script>
+              $(document).ready(function() {
+
+$('.counter').each(function () {
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 4000,
+easing: 'swing',
+step: function (now) {
+$(this).text(Math.ceil(now));
+}
+});
+});
+
+});
+            </script>
             <script>
             jQuery(document).ready(function($) {
             $('.fadeOut').owlCarousel({
