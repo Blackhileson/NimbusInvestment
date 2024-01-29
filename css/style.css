@@ -120,20 +120,24 @@ border:0px;
 
 
 #banner .owl-carousel .item.s1 {
-    background: url("../images/slider/s31.png") no-repeat scroll center center /cover;
+    background: url("../images/slider/Mutalfund.png") no-repeat scroll center center /cover;
 }
 #banner .owl-carousel .item.s2 {
-    background: url("../images/slider/s3.png") no-repeat scroll center center /cover;
+    background: url("../images/slider/demat.png") no-repeat scroll center center /cover;
 }
 #banner .owl-carousel .item.s3 {
-    background: url("../images/slider/slider1.png") no-repeat scroll center center /cover;
+    background: url("../images/slider/childeduc.png") no-repeat scroll center center /cover;
 }
 #banner .owl-carousel .item.s4 {
-    background: url("../images/slider/s1.png") no-repeat scroll center center /cover;
+    background: url("../images/slider/childinvestment.png") no-repeat scroll center center /cover;
 }
 
 #banner .owl-carousel .item.s5 {
-    background: url("../images/slider/s4.png") no-repeat scroll center center /cover;
+    background: url("../images/slider/retirement.png") no-repeat scroll center center /cover;
+}
+
+#banner .owl-carousel .item.s6 {
+    background: url("../images/slider/retirment.png") no-repeat scroll center center /cover;
 }
 
 .banner {
