@@ -128,56 +128,99 @@
         Schedule A Meeting With Us
    </div> -->
 
-<div class="form_con form-custom">
-      
-        <div id="mail-status" style="margin-top:0px;"></div>
-  <div id="error_msg" style="color:red; font-size:12px;"></div>
-        
-    
-    <div class="form-group">
-      <!--<label>Name</label>-->
-      <input type="text" name="userName" id="userName" class="form-control" placeholder="Name" required/>
-      <div class="clearfix"></div>
-    </div>
-       
-    
-         
-    <div class="form-group">
-      <!--<label>Mobile</label>-->
-      <input type="text" maxlength="10" name="mobile" id="mobile" class="form-control" placeholder="Mobile" required/>
-      <div class="clearfix"></div>
-    </div>
-      
-         
-    <div class="form-group">
-      <!--<label>Mobile</label>-->
-      <!--<input type="text" maxlength="10" name="userCity" id="userCity" class="form-control" placeholder="City" required/>-->
-      <div class="clearfix"></div>
-    </div>
-  
-              <div class="form-group">
-      <!--<label>Mobile</label>-->
-      <input type="text" maxlength="10" name="userCity" id="userCity" class="form-control" placeholder="City" required/>
-      <div class="clearfix"></div>
-    </div>
-       
-    <div class="form-group">
-      <!--<label>Email</label>-->
-      <input type="email" name="userEmail" id="userEmail" class="form-control" placeholder="Email" required/>
-      <div class="clearfix"></div>
-    </div>
-    
-        
-    <div class="form-group">
-      <!--<label>Message</label>-->
-      <textarea name="message" id="message" class="form-control" rows="" cols="50" placeholder="Message" required></textarea>
-      <div class="clearfix"></div>
+   <div id="frmContact">
+    <div class="form_con form-custom">
+      <form onsubmit="sendEmail();reset(); return false;">
+        <div class="form-group">
+          <!--<label>Name</label>-->
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            class="form-control"
+            placeholder="Name"
+            required
+          />
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group">
+          <!--<label>Mobile</label>-->
+          <input
+            type="text"
+            maxlength="10"
+            name="mobile"
+            id="mobile"
+            class="form-control"
+            placeholder="Mobile"
+            required
+          />
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group">
+          <!--<label>Mobile</label>-->
+          <input
+            type="text"
+            maxlength="10"
+            name="userCity"
+            id="userCity"
+            class="form-control"
+            placeholder="City"
+            required
+          />
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group">
+          <!--<label>Email</label>-->
+          <input
+            type="email"
+            name="userEmail"
+            id="userEmail"
+            class="form-control"
+            placeholder="Email"
+            required
+          />
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group">
+          <!--<label>Message</label>-->
+          <textarea
+            name="message"
+            id="message"
+            class="form-control"
+            rows=""
+            cols="50"
+            placeholder="Message"
+            required
+          ></textarea>
+          <div class="clearfix"></div>
+        </div>
+
+        <div
+          class="form_control"
+          style="float: left; width: 100%; text-align: center"
+        >
+          <button
+            name="submit"
+            class="btn btn-primary submit login_btn"
+          >
+            <span>Send</span>
+          </button>
+        </div>
+      </form>
     </div>
 
-     <div class="form_control" style="float:left;width:100%;text-align: center;">
-     <button name="submit" class="btn btn-primary submit login_btn" onclick="sendContact();"><span>Send</span></button>
-     </div>
-           </div>
+    <!-- </form> -->
+
+    <div class="clearfix"></div>
+  </div>
   <!-- </form> -->
 
 <div class="clearfix"></div>
@@ -400,12 +443,16 @@ height: 43px;
       var mobile = document.getElementById("mobile").value;
       var userCity = document.getElementById("userCity").value;
 
-      var emailContent = "Name: " + userName + "\n";
-      emailContent += "Email: " + userEmail + "\n";
-      emailContent += "Mobile: " + mobile + "\n";
-      emailContent += "userCity: " + userCity + "\n";
+      var emailContent = "<table border='1' cellpadding='2'>";
+      emailContent += "<tr><td><strong>Name:</strong></td><td>" + userName + "</td></tr>";
+      emailContent += "<tr><td><strong>Email:</strong></td><td>" + userEmail + "</td></tr>";
+      emailContent += "<tr><td><strong>Mobile:</strong></td><td>" + mobile + "</td></tr>";
+      emailContent += "<tr><td><strong>City:</strong></td><td>" + userCity + "</td></tr>";
 
-      emailContent += "Message: " + message + "\n";
+      emailContent += "<tr><td><strong>Message:</strong></td><td>" + message + "</td></tr>";
+      
+
+      emailContent += "</table>";
 
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -415,6 +462,7 @@ height: 43px;
         From: "mandviyabhavya@gmail.com",
         Subject: "Testing Kadu bhai",
         Body: emailContent,
+        ContentType: "text/html",
       }).then((message) => alert(message));
     }
   </script>
@@ -433,9 +481,7 @@ height: 43px;
             "&mobile=" +
             $("#mobile").val() +
             "&message=" +
-            $("#message").val() +
-            "&captcha=" +
-            $("#captcha").val(),
+            $("#message").val() ,
           // data:'userName='+$("#userName").val()+'&userEmail='+$("#userEmail").val()+'&mobile='+$("#mobile").val()+'&userCity='+$("#userCity").val()+'&message='+$("#message").val()+'&captcha='+$("#captcha").val(),
           type: "POST",
           success: function (data) {
@@ -444,7 +490,7 @@ height: 43px;
             $("#userEmail").val("");
             $("#mobile").val("");
             $("#message").val("");
-            $("#captcha").val("");
+          
             setInterval(function () {
               $("#mail-status").html("");
             }, 3000);
