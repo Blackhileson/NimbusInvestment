@@ -132,9 +132,9 @@ border:0px;
     background: url("../images/slider/childinvestment.png") no-repeat scroll center center /cover;
 }
 
-/* #banner .owl-carousel .item.s5 {
-    background: url("../images/slider/retirement.png") no-repeat scroll center center /cover;
-} */
+#banner .owl-carousel .item.s5 {
+    background: url("../images/slider/childMarriage.png") no-repeat scroll center center /cover;
+}
 
 #banner .owl-carousel .item.s6 {
     background: url("../images/slider/retirment.png") no-repeat scroll center center /cover;
@@ -1843,3 +1843,15 @@ font-size: 11px;
     padding: 6px;
     border: 1px solid #5555553d;
 }
+.animate-charcter2 {
+   background-image: linear-gradient(90deg, #8b0013 0%, #181f49 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  }
