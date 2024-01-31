@@ -132,9 +132,9 @@ border:0px;
     background: url("../images/slider/childinvestment.png") no-repeat scroll center center /cover;
 }
 
-#banner .owl-carousel .item.s5 {
+/* #banner .owl-carousel .item.s5 {
     background: url("../images/slider/retirement.png") no-repeat scroll center center /cover;
-}
+} */
 
 #banner .owl-carousel .item.s6 {
     background: url("../images/slider/retirment.png") no-repeat scroll center center /cover;
