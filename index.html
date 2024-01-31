@@ -188,7 +188,9 @@
               <div class="four col-md-3 mt-3">
                 <div class="counter-box colored">
                   <i class="fa fa-group"></i>
-                  <span class="counter">3000 <i class="fa fa-plus"></i></span>
+                  <span class="counter"
+                    >3000 <i class="fa fa-plus" style="font-size: smaller"></i
+                  ></span>
                   <p>Clients</p>
                 </div>
               </div>
@@ -531,43 +533,8 @@
                 </div>
 
                 <!-- Stock -->
-                <div class="col-md-8" id="stock-market-section">
-                  <div class="markrt-view">
-                      <h5>Stock Market</h5>
-                      <div class="box">
-                          <div>
-                              <label for="search">Search Exchange:</label>
-                              <input type="text" id="search" name="search">
-                              <button onclick="searchStocks()">Search</button>
-                          </div>
-                          <div style="overflow-x: auto;">
-                              <table style="width: 100%; table-layout: fixed;">
-                                  <colgroup>
-                                      <col style="width: 25%;">
-                                      <col style="width: 25%;">
-                                      <col style="width: 25%;">
-                                      <col style="width: 25%;">
-                                  </colgroup>
-                                  <thead>
-                                      <tr>
-                                          <th>Symbol</th>
-                                          <th>Exchange</th>
-                                          <th>Price</th>
-                                          <th>Name</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody id="stock-table" style="display: block;
-                                  height: 186px;
-                                  overflow-y: scroll;
-                                  width: 709px;">
-                                      <!-- Stock data will be dynamically inserted here -->
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- End -->
+
+                <!-- End -->
               </div>
             </div>
           </div>
@@ -575,8 +542,42 @@
         </div>
       </div>
     </section>
-
-
+    <section>
+      <div id="stock-market-section">
+        <div class="container markrt-view">
+          <h5>Stock Market</h5>
+          <div class="box" style="padding: 10px">
+            <div>
+              <label for="search">Search Exchange:</label>
+              <input type="text" id="search" name="search" />
+              <button onclick="searchStocks()">Search</button>
+            </div>
+            <div style="overflow: scroll; height: 300px">
+              <table style="width: 100%; table-layout: fixed">
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Exchange</th>
+                    <th>Price</th>
+                    <th>Name</th>
+                  </tr>
+                </thead>
+                <tbody
+                  id="stock-table"
+                  style="padding: 5px; width: 100%"
+                ></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="market-detail" style="margin: 40px 0">
       <div class="container">
@@ -982,56 +983,61 @@
       }
     </script>
 
-<script>
-  const apiUrl = "https://financialmodelingprep.com/api/v3/stock/list?apikey=4043df9b44cea2665540a2f7ba5f89bb";
+    <script>
+      const apiUrl =
+        "https://financialmodelingprep.com/api/v3/stock/list?apikey=4043df9b44cea2665540a2f7ba5f89bb";
 
-  function searchStocks() {
-      const searchTerm = document.getElementById("search").value;
-      const stockTable = document.getElementById("stock-table");
-      stockTable.innerHTML = ""; // Clear existing table data
-      fetch(apiUrl)
+      function searchStocks() {
+        const searchTerm = document.getElementById("search").value;
+        const stockTable = document.getElementById("stock-table");
+        stockTable.innerHTML = ""; // Clear existing table data
+        fetch(apiUrl)
           .then((response) => response.json())
           .then((data) => {
-              data.forEach((entry, index) => {
-                  if (
-                      entry.exchange === "National Stock Exchange of India" ||
-                      entry.exchange === "Bombay Stock Exchange"
-                  ) {
-                      let exchangeName;
-                      if (entry.exchange === "Bombay Stock Exchange") {
-                          exchangeName = "BSE";
-                      } else if (entry.exchange === "National Stock Exchange of India") {
-                          exchangeName = "NSE";
-                      }
+            data.forEach((entry, index) => {
+              if (
+                entry.exchange === "National Stock Exchange of India" ||
+                entry.exchange === "Bombay Stock Exchange"
+              ) {
+                let exchangeName;
+                if (entry.exchange === "Bombay Stock Exchange") {
+                  exchangeName = "BSE";
+                } else if (
+                  entry.exchange === "National Stock Exchange of India"
+                ) {
+                  exchangeName = "NSE";
+                }
 
-                      if (
-                          entry.name.toLowerCase().includes(searchTerm) ||
-                          entry.exchange.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          (searchTerm.toLowerCase() === "nse" &&
-                              entry.exchange === "National Stock Exchange of India") ||
-                          (searchTerm.toLowerCase() === "bse" &&
-                              entry.exchange === "Bombay Stock Exchange")
-                      ) {
-                          const row = document.createElement("tr");
-                          row.innerHTML = `
+                if (
+                  entry.name.toLowerCase().includes(searchTerm) ||
+                  entry.exchange
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase()) ||
+                  (searchTerm.toLowerCase() === "nse" &&
+                    entry.exchange === "National Stock Exchange of India") ||
+                  (searchTerm.toLowerCase() === "bse" &&
+                    entry.exchange === "Bombay Stock Exchange")
+                ) {
+                  const row = document.createElement("tr");
+                  row.innerHTML = `
                               <td style="width: 25%;">${entry.symbol}</td>
                               <td style="width: 25%;">${exchangeName}</td>
                               <td style="width: 25%;">${entry.price}</td>
                               <td style="width: 25%;">${entry.name}</td>
                           `;
-                          stockTable.appendChild(row);
-                      }
-                  }
-              });
+                  stockTable.appendChild(row);
+                }
+              }
+            });
           })
           .catch((error) => console.error("Error fetching stock data:", error));
-  }
+      }
 
-  // Initial call to populate the table with NSE and BSE data
-  searchStocks();
-</script>
+      // Initial call to populate the table with NSE and BSE data
+      searchStocks();
+    </script>
 
-
+    <!-- 
     <script>
       const apiKey = "K2UZ6NAAHDIO57X4"; // Replace with your actual API key
       const apiUrl =
@@ -1057,6 +1063,6 @@
           });
         })
         .catch((error) => console.error("Error fetching stock news:", error));
-    </script>
+    </script> -->
   </body>
 </html>
